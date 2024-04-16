@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT PAGE</title>
+    <link rel="stylesheet" href="./css/product.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body><div class="nav" id="navbar">
+            <input type="checkbox" id="nav-check">
+                <img src="./img/Atsuko_Logo_Red2022_200x@2x.avif" alt="logo">
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+              <a href="home.html" >HOME</a>
+              <a href="product.html" >PRODUCT</a>
+              <a href="aboutus.html" >ABOUT US</a>
+              <a href="contactpage.html">CONTACT US</a>
+              
+            </div>
+          </div> 
+          <!-- product section -->
+    <div class="container">
+      <div class="product-wrapper">
+        <div class="product-img">
+           <img src="./img/mainproduct.webp" alt="" />
+        </div>
+        <div class="product-info">
+          <div class="product-description">
+            <div class="product-title">ONE PIECE
+              TEAM PATCHWORK HOODIE</div>
+            <div class="product-price">CA$ 55.00</div>
+            <div class="product-desc">~ Embroidered artwork on front and back
+              ~ Drawstring hood
+              ~ Long sleeves
+              ~ Side pockets
+              ~ 60% Cotton, 40% Polyester
+              ~ Imported
+              ~ Atsuko Exclusive
+              ~ Officially Licensed One Piece merchandise</div>
+            <div class="product-images">
+              <h4>check for more images</h4>
+                <div class="parent">
+                  
+                    <div class="div1"><img src="./img/main2.webp" alt="" > </div>
+                    <div class="div2"><img src="./img/main3.webp" alt=""> </div>
+                    <div class="div3"><img src="./img/main4.webp" alt=""> </div>
+                    <div class="div4"><img src="./img/main5.webp" alt=""> </div>
+                    </div>
+            </div>
+          </div>
+          <div class="product-add-to-cart"><button>Add to Cart</button> </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // animation for the production section
+      gsap.from(".navbar", 2, { y: -100, ease: Expo.easeInOut });
+      gsap.from(".product-info", 4, { x: 600, ease: Expo.easeInOut });
+      gsap.from(".product-img", 4, { y: 600, ease: Expo.easeInOut });
+      gsap.from(".product-add-to-cart", 2, {
+        oapcity: 0,
+        y: 600,
+        ease: Expo.easeInOut,
+        delay: 2.4,
+      });
+      TweenMax.staggerFrom(
+        ".product-description > div",
+        3,
+        { opacity: 0, x: 200, ease: Expo.easeInOut, delay: 1.4 },
+        0.08
+      );
+    </script>
+  </body>
+</html>
